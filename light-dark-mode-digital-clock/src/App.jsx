@@ -13,8 +13,20 @@ function App() {
   const [bgTime, setBgTime] = useState(new Date(bg).toLocaleTimeString())
   const [date,setDate] = useState(new Date().toLocaleDateString())
 
+  useEffect(() => {
+    const intervalUK = setInterval(() => {
+     setTime(new Date().toLocaleTimeString())
+     setBgTime(new Date(bg).toLocaleTimeString())
+    },1000)
+    return () => clearInterval(intervalUK)
+  },[time,bgTime])
+
+
+
   return (
     <div className='light'>
+      <h3>Today is:</h3>
+      <span> {date}</span>
       <h3>UK time</h3>
       <p>{time}</p>
       <h3>BG time</h3>
