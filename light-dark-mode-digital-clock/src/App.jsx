@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import {BiSun,BiSolidMoon} from 'react-icons/bi'
 
 function App() {
 
@@ -30,7 +31,14 @@ function App() {
 
   return (
     <div className='light' id={isDark ? 'light': 'dark'}>
-      <button onClick={mode} className='btn'>Dark</button>
+      <button 
+        onClick={mode} 
+        className='btn'>
+          {!isDark ? 
+             (<div className='icon'><span>Light</span><BiSun/></div>) 
+             : 
+             (<div className='icon'><span>Dark</span><BiSolidMoon/></div>)}
+      </button>
       <div className="date">
         <h3>Today's Date </h3>
         <span> {date}</span>
