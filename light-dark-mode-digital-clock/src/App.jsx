@@ -12,6 +12,7 @@ function App() {
   const [time,setTime] = useState(new Date().toLocaleTimeString())
   const [bgTime, setBgTime] = useState(new Date(bg).toLocaleTimeString())
   const [date,setDate] = useState(new Date().toLocaleDateString())
+  const [isDark, setIsDark] = useState(false)
 
   useEffect(() => {
     const intervalUK = setInterval(() => {
@@ -22,9 +23,14 @@ function App() {
   },[time,bgTime])
 
 
+  function mode() {
+    setIsDark(!isDark)
+  }
+
 
   return (
-    <div className='light'>
+    <div className='light' id={isDark ? 'light': 'dark'}>
+      <button onClick={mode} className='btn'>Dark</button>
       <div className="date">
         <h3>Today's Date </h3>
         <span> {date}</span>

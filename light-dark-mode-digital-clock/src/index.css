@@ -5,13 +5,22 @@
 }
 
 .light {
-  background-color: rgb(247, 249, 251);
   width: 100%;
   height: 100vh;
-  color: rgb(42, 40, 40);
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+#light {
+   background-color: rgb(247, 249, 251); 
+   color: rgb(42, 40, 40);
+}
+
+#dark {
+  background-color: rgb(7, 42, 72);
+  color: rgb(42, 40, 40);
 }
 
 .date, .uk-time, .bg-time {
@@ -24,4 +33,15 @@
   height: 100px;
   background-color: rgb(232, 202, 228);
   border-radius: 10px;
+}
+
+.btn {
+  position: absolute;
+  top: 20px;
+  width: 80px;
+  height: 30px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  color: rgb(42, 40, 40);
 }
