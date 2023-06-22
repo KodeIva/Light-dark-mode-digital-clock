@@ -25,12 +25,18 @@ function App() {
 
   return (
     <div className='light'>
-      <h3>Today is:</h3>
-      <span> {date}</span>
-      <h3>UK time</h3>
-      <p>{time}</p>
-      <h3>BG time</h3>
-      <p>{bgTime}</p>
+      <div className="date">
+        <h3>Today's Date </h3>
+        <span> {date}</span>
+      </div>
+      <div className='uk-time'>
+        <h3>UK time</h3>
+        <p>{time}</p>
+      </div>
+      <div className="bg-time">
+       <h3>BG time</h3>
+       <p>{bgTime}</p>
+      </div>     
     </div>
   )
 }
