@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import {BiSun,BiSolidMoon} from 'react-icons/bi'
+import {BiSun,BiSolidMoon} from 'react-icons/bi'            
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
   const [time,setTime] = useState(new Date().toLocaleTimeString())
   const [bgTime, setBgTime] = useState(new Date(bg).toLocaleTimeString())
   const [date,setDate] = useState(new Date().toLocaleDateString())
-  const [isDark, setIsDark] = useState(false)
+  const [isDark, setIsDark] = useState(JSON.parse(localStorage.getItem('theme')) || false)
 
   useEffect(() => {
     const intervalUK = setInterval(() => {
@@ -25,6 +25,7 @@ function App() {
 
 
   function mode() {
+    localStorage.setItem('theme', JSON.stringify(!isDark) )
     setIsDark(!isDark)
   }
 
