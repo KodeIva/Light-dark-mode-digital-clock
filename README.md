@@ -13,7 +13,7 @@
 
 ## Screenshot
  
-![](./../Light-dark-mode-digital-clock/light-dark-mode-digital-clock/public/images/)
+![](../Light-dark-mode-digital-clock/light-dark-mode-digital-clock/public/images/Screenshot.png)
 
 
 ## Links

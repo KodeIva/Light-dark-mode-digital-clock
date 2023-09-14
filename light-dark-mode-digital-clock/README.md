@@ -15,7 +15,7 @@
 
 ## Screenshot
  
-![](./public/images/screenshot.jpg)
+![](../light-dark-mode-digital-clock/public/images/Screenshot.png/)
 
 
 ## Links
